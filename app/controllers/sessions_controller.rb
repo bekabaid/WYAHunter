@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.user_id
-      redirect_to '/'
+      redirect_to 'create'
     else
-      redirect_to 'login'
+      redirect_to 'dashboard'
     end
   end
 
