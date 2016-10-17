@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: MyString
+  available: false
+  quantity: 1
+  description: MyText
+  privilege: 1
+
+two:
+  room: MyString
+  available: false
+  quantity: 1
+  description: MyText
+  privilege: 1

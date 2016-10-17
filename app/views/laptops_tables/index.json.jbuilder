@@ -1,0 +1,1 @@
+json.array! @laptops_tables, partial: 'laptops_tables/laptops_table', as: :laptops_table

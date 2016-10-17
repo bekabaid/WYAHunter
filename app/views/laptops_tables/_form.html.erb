@@ -1,0 +1,42 @@
+<%= form_for(laptops_table) do |f| %>
+  <% if laptops_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(laptops_table.errors.count, "error") %> prohibited this laptops_table from being saved:</h2>
+
+      <ul>
+      <% laptops_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :room %>
+    <%= f.text_field :room %>
+  </div>
+
+  <div class="field">
+    <%= f.label :available %>
+    <%= f.check_box :available %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :privilege %>
+    <%= f.number_field :privilege %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

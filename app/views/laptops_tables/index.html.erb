@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Laptops Tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Available</th>
+      <th>Quantity</th>
+      <th>Description</th>
+      <th>Privilege</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @laptops_tables.each do |laptops_table| %>
+      <tr>
+        <td><%= laptops_table.room %></td>
+        <td><%= laptops_table.available %></td>
+        <td><%= laptops_table.quantity %></td>
+        <td><%= laptops_table.description %></td>
+        <td><%= laptops_table.privilege %></td>
+        <td><%= link_to 'Show', laptops_table %></td>
+        <td><%= link_to 'Edit', edit_laptops_table_path(laptops_table) %></td>
+        <td><%= link_to 'Destroy', laptops_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Laptops Table', new_laptops_table_path %>
