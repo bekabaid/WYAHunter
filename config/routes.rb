@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'sessions#new.html.erb'
   resources :resources
   resources :whiteboards_tables
   resources :rooms_tables
