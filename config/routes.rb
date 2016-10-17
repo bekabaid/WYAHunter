@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :users
 
   get 'login' => 'sessions#new.html.erb'
+  get 'dashboard' => 'sessions#dashboard.html.erb'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  # For details on the D
   # available within this file, see http://guides.rubyonrails.org/routing.html
 end
