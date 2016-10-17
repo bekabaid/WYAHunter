@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by_email(params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
-      session[:user_id] = @user.user_id
+      session[:user_id] = @user.id
       redirect_to 'create'
     else
       redirect_to 'dashboard'
