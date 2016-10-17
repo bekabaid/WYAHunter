@@ -10,7 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927204333) do
+ActiveRecord::Schema.define(version: 20161017150911) do
+
+  create_table "coffee_tables", force: :cascade do |t|
+    t.string   "room"
+    t.boolean  "available"
+    t.text     "description"
+    t.integer  "privilege"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "laptops_tables", force: :cascade do |t|
+    t.string   "room"
+    t.boolean  "available"
+    t.integer  "quantity"
+    t.text     "description"
+    t.integer  "privilege"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "resources", force: :cascade do |t|
+    t.string   "title"
+    t.string   "path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms_tables", force: :cascade do |t|
+    t.string   "room"
+    t.boolean  "available"
+    t.integer  "quantity"
+    t.text     "description"
+    t.integer  "privilege"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "my_name"
@@ -19,6 +55,26 @@ ActiveRecord::Schema.define(version: 20160927204333) do
     t.integer  "privilege"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "whiteboards_tables", force: :cascade do |t|
+    t.string   "room"
+    t.boolean  "available"
+    t.integer  "quantity"
+    t.text     "description"
+    t.integer  "privilege"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "whiteboardss_tables", force: :cascade do |t|
+    t.string   "room"
+    t.boolean  "available"
+    t.integer  "quantity"
+    t.text     "description"
+    t.integer  "privilege"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

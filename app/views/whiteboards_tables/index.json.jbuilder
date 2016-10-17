@@ -1,0 +1,1 @@
+json.array! @whiteboards_tables, partial: 'whiteboards_tables/whiteboards_table', as: :whiteboards_table

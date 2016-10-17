@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :resources
+  resources :whiteboards_tables
+  resources :rooms_tables
+  resources :laptops_tables
+  resources :coffee_tables
   get 'create'  => 'users#new'
   resources :users
 

@@ -1,0 +1,2 @@
+class WhiteboardsTable < ApplicationRecord
+end
