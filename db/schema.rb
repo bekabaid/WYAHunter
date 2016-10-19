@@ -67,14 +67,4 @@ ActiveRecord::Schema.define(version: 20161017150911) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "whiteboardss_tables", force: :cascade do |t|
-    t.string   "room"
-    t.boolean  "available"
-    t.integer  "quantity"
-    t.text     "description"
-    t.integer  "privilege"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
 end
