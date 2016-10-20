@@ -1,0 +1,1 @@
+json.partial! "whiteboards_tables/whiteboards_table", whiteboards_table: @whiteboards_table
