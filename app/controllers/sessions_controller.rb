@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def dashboard
-
+    before_action :require_user, only: [:index, :show]
   end
 
   def create
@@ -17,6 +17,8 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+
+
 
   def destroy
     session[:user_id] = nil
