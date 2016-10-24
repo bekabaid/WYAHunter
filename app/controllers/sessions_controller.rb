@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def dashboard
-
+    before_action :require_user, only: [:index, :show]
   end
 
   def create
@@ -18,9 +18,11 @@ class SessionsController < ApplicationController
     end
   end
 
+
+
   def destroy
     session[:user_id] = nil
-    redirect_to '/'
+    redirect_to '/login'
   end
 
 end
