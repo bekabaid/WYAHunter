@@ -11,6 +11,8 @@ module ApplicationHelper
       return user.my_name
     end
     return " "
-    end
+  end
+
+
 
 end

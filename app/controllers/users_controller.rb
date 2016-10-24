@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
   def new
     @user = User.new
   end
@@ -12,7 +13,9 @@ class UsersController < ApplicationController
     else
       redirect_to '/create'
     end
+
   end
+
 
 
   private
