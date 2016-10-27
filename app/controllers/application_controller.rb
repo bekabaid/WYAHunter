@@ -17,11 +17,6 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
-  def show
-    @user = User.find(params[:id])
-    redirect_to root_path unless @user == current_user
-  end
-
   helper_method :require_user
 
   private
