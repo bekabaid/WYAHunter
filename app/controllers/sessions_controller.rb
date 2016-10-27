@@ -13,7 +13,16 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       session[:expires_at] = Time.now + 8.hour
-      redirect_to '/dashboard'
+
+      @user_privilege = User.find(session[:user_id])[:privilege]
+      if  @user_privilege > 0
+        redirect_to '/dashboard'
+      elsif @user_privilege < 0
+        redirect_to '/admin_dashboard'
+      else
+        redirect_to '/login'
+      end
+
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
