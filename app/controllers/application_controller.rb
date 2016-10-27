@@ -14,7 +14,11 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    redirect_to '/login' unless current_user
+    unless current_user
+    redirect_to '/login'
+    session[:user_id] = nil
+    session[:expires_at] = 0
+    end
   end
 
   def show
@@ -30,6 +34,8 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       # flash[:error] = "You must be logged in to access this section"
       redirect_to '/login' # halts request cycle
+      session[:user_id] = nil
+      session[:expires_at] = 0
     end
   end
 
