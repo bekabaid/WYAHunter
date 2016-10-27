@@ -1,4 +1,5 @@
 class WhiteboardsTablesController < ApplicationController
+  before_action :require_login, only: [:edit, :update, :destroy]
   before_action :set_whiteboards_table, only: [:show, :edit, :update, :destroy]
 
   # GET /whiteboards_tables

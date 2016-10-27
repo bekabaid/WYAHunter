@@ -1,4 +1,5 @@
 class LaptopsTablesController < ApplicationController
+  before_action :require_login, only: [:edit, :update, :destroy]
   before_action :set_laptops_table, only: [:show, :edit, :update, :destroy]
 
   # GET /laptops_tables

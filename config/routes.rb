@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'create'  => 'users#new'
   resources :users
 
+
   get 'login' => 'sessions#new.html.erb'
   get 'dashboard' => 'sessions#dashboard.html.erb'
   post 'login' => 'sessions#create'
