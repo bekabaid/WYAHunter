@@ -1,4 +1,5 @@
 class RoomsTablesController < ApplicationController
+  before_action :require_login, only: [:edit, :update, :destroy]
   before_action :set_rooms_table, only: [:show, :edit, :update, :destroy]
 
   # GET /rooms_tables

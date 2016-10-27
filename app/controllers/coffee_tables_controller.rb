@@ -1,4 +1,5 @@
 class CoffeeTablesController < ApplicationController
+  before_action :require_login, only: [:edit, :update, :destroy]
   before_action :set_coffee_table, only: [:show, :edit, :update, :destroy]
 
   # GET /coffee_tables
