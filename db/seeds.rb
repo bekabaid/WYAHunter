@@ -60,23 +60,7 @@ Resource.create([{title: 'Coffee', path: 'coffee_tables'},          {title: 'Whi
 User.create(my_name: 'Bobby', email: 'hello@hello.com',
              password_digest:'password', privilege: 2)
 
-User.create(my_name: 'Scott', email: 'hi@hi.com',
-             password_digest: 'password', privilege: 3)
 
-User.create(my_name: 'Logan', email: 'logan@logan.com',
-             password_digest: 'password', privilege: 4)
-
-User.create(my_name: 'Orroro', email: 'priv@priv.com',
-             password_digest: 'password', privilege: 5)
-
-User.create(my_name: 'Hank', email: 'for@for.com',
-             password_digest: 'password', privilege: 6)
-
-User.create(my_name: 'Jubilation', email: 'email@email.com',
-             password_digest: 'password', privilege: 7)
-
-User.create(my_name: 'Remmy', email: 'yes@yes.com',
-             password_digest: 'password', privilege: 8)
-
-User.create(my_name: 'Jean', email: 'no@no.com',
-             password_digest: 'password', privilege: 9)
+#password is sup
+User.create(my_name: 'David', email: 'david@david.com',
+            password_digest:'$2a$10$/wUgVZwYw2W4mWuqwVtoqOir3UMYUN12JrumQukNJjSCWLZRe/paa', privilege: -1)

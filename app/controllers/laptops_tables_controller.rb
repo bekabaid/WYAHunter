@@ -41,6 +41,7 @@ class LaptopsTablesController < ApplicationController
   # PATCH/PUT /laptops_tables/1
   # PATCH/PUT /laptops_tables/1.json
   def update
+
     respond_to do |format|
       if @laptops_table.update(laptops_table_params)
         format.html { redirect_to @laptops_table, notice: 'Laptops table was successfully updated.' }

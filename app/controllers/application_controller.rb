@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  protect_from_forgery # with: :exception
+  protect_from_forgery  with: :exception
   helper_method :current_user, :logged_in?
 
   def current_user
@@ -33,5 +33,7 @@ class ApplicationController < ActionController::Base
       session[:expires_at] = 0
     end
   end
+
+
 
 end
