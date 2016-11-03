@@ -1,1 +1,0 @@
-json.array! @coffee_tables, partial: 'coffee_tables/coffee_table', as: :coffee_table

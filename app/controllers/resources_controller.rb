@@ -61,9 +61,6 @@ class ResourcesController < ApplicationController
     end
   end
 
-  #might add this later
-  #before_action :require_user, only: [:index, :show]
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_resource
@@ -72,6 +69,6 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:title, :path)
+      params.require(:resource).permit(:location, :privilege, :description, :available, :type)
     end
 end

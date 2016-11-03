@@ -1,13 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @resource.title %>
+  <strong>Location:</strong>
+  <%= @resource.location %>
 </p>
 
 <p>
-  <strong>Path:</strong>
-  <%= @resource.path %>
+  <strong>Privilege:</strong>
+  <%= @resource.privilege %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @resource.description %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @resource.available %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @resource.type %>
 </p>
 
 <%= link_to 'Edit', edit_resource_path(@resource) %> |

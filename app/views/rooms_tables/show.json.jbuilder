@@ -1,1 +1,0 @@
-json.partial! "rooms_tables/rooms_table", rooms_table: @rooms_table

@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  path: MyString
+  location: MyString
+  privilege: 1
+  description: MyText
+  available: 1
+  type: 
 
 two:
-  title: MyString
-  path: MyString
+  location: MyString
+  privilege: 1
+  description: MyText
+  available: 1
+  type: 

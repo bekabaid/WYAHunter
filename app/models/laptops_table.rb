@@ -1,2 +1,0 @@
-class LaptopsTable < ApplicationRecord
-end
