@@ -11,10 +11,8 @@ class UsersController < ApplicationController
     flash.now[:danger] = 'email already linked to account'
     render 'new'
     else @user.save
-      session[:user_id] = user.id
       redirect_to '/'
     end
-
   end
 
   private

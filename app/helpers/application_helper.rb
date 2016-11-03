@@ -10,6 +10,10 @@ module ApplicationHelper
     end
   end
 
+  def user_admin
+    require_admin
+  end
+
   def user_name
     user = user_info
     if user != nil

@@ -20,8 +20,19 @@ class ApplicationController < ActionController::Base
     session[:expires_at] = 0
     end
   end
-
   helper_method :require_user
+
+  def require_admin
+    if(session[:user_id] != nil)
+      user_id = session[:user_id]
+      user = User.find(user_id)
+    end
+    unless(current_user && user[:privilege] < 0)
+      redirect_to '/login'
+      return
+    end
+  end
+  helper_method :require_admin
 
   private
 
