@@ -5,7 +5,7 @@ class CreateResources < ActiveRecord::Migration[5.0]
       t.integer :privilege
       t.text :description
       t.integer :available
-      t.string :type
+      t.string :resource_type
 
       t.timestamps
     end

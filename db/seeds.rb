@@ -7,76 +7,45 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Seed resources
-LaptopsTable.create(room: 'Hunter Library 2nd Floor',
-                    available: true,
-                    quantity: 42,
-                    description: 'The library is closing soon, so you can only get one for the next hour.',
-                    privilege: 2)
 
-LaptopsTable.create(room: 'Thomas Hunter Hall',
-                    available: true,
-                    quantity: 10,
-                    description: 'We only have Macs available',
-                    privilege: 3)
+    Resource.create(location: 'Hunter West Cafeteria',
+                     privilege: 2,
+                     description:'The coffee machine is broken',
+                     available: 0,
+                     resource_type: 'coffee')
 
-RoomsTable.create(room: 'Hunter North J-Lab',
-                   available: true,
-                   quantity: 0,
-                   description: 'There will be a staff meeting going on at 3 p.m',
-                   privilege: 4)
+    Resource.create(location: 'North Building Library',
+                                      privilege: 2,
+                                      description:'There will be a faculty meeting in 2 hours.',
+                                      available: 1,
+                                      resource_type: 'rooms')
 
-RoomsTable.create(room: 'Hunter North 16th Floor Library',
-                   available: false,
-                   quantity: 0,
-                   description: 'Closed for cleaning',
-                   privilege: 5)
+    Resource.create(location: 'Hunter North Lobby',
+                     privilege: 2,
+                     description:'New Espresso flavors or something lol idk coffee.',
+                     available: 1,
+                     resource_type: 'coffee')
 
-WhiteboardsTable.create(room: 'Hunter Library 2nd Floor',
-                    available: true,
-                    quantity: 4,
-                    description: '',
-                    privilege: 6)
+    Resource.create(location: 'Hunter Library 3rd Floor',
+                     privilege: 2,
+                     description:'',
+                     available: 0,
+                     resource_type: 'whiteboards')
 
-WhiteboardsTable.create(room: 'Hunter Library 3rd Floor',
-                    available: false,
-                    quantity: 0,
-                    description: 'Boards are broken',
-                    privilege: 7)
+    Resource.create(location: 'Thomas Hunter Hall 3rd Floor',
+                              privilege: 2,
+                              description:'We only have Macs left',
+                              available: 10,
+                              resource_type: 'laptops')
 
-CoffeeTable.create(room: 'Hunter North USG',
-                   available: true,
-                   description: 'Espresso available!',
-                   privilege: 8)
+    Resource.create(location: 'Hunter North J-Lab',
+                                               privilege: 2,
+                                               description:'Please keep it quiet, there is an exam going on in the next room.',
+                                               available: 1,
+                                               resource_type: 'rooms')
 
-CoffeeTable.create(room: 'Cafeteria',
-                   available: true,
-                   description: 'Out of sugar',
-                   privilege: 9)
-
-Resource.create([{title: 'Coffee', path: 'coffee_tables'},          {title: 'Whiteboards', path: 'whiteboards_tables'},
-    {title: 'Rooms', path: 'rooms_tables'},
-    {title: 'Laptops', path: 'laptops_tables'}])
-
-User.create(my_name: 'Bobby', email: 'hello@hello.com',
-             password_digest:'password', privilege: 2)
-
-User.create(my_name: 'Scott', email: 'hi@hi.com',
-             password_digest: 'password', privilege: 3)
-
-User.create(my_name: 'Logan', email: 'logan@logan.com',
-             password_digest: 'password', privilege: 4)
-
-User.create(my_name: 'Orroro', email: 'priv@priv.com',
-             password_digest: 'password', privilege: 5)
-
-User.create(my_name: 'Hank', email: 'for@for.com',
-             password_digest: 'password', privilege: 6)
-
-User.create(my_name: 'Jubilation', email: 'email@email.com',
-             password_digest: 'password', privilege: 7)
-
-User.create(my_name: 'Remmy', email: 'yes@yes.com',
-             password_digest: 'password', privilege: 8)
-
-User.create(my_name: 'Jean', email: 'no@no.com',
-             password_digest: 'password', privilege: 9)
+    Resource.create(location: 'Hunter Library 2nd Floor',
+                              privilege: 2,
+                              description:'The library is closing soon, so you can only get one for the next hour.',
+                              available: 42,
+                              resource_type: 'laptops')
