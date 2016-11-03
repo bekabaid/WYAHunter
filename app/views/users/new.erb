@@ -3,9 +3,9 @@
     <div class="form">
 
       <h1>Create an Account</h1>
-
+      <%= flash[:danger] %>
       <%= form_for(@user) do |f| %>
-          <%= f.text_field :my_name, :placeholder => "name" %>
+          <%= f.text_field :my_name, :placeholder => "Name" %>
           <%= f.email_field :email, :placeholder => "Email" %>
           <%= f.password_field :password, :placeholder => "Password" %>
 
