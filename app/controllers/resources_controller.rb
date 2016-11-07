@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
-  before_action :require_login, only: [:edit, :update, :destroy]
-
+  before_action :require_login, only: [:edit, :update]
+  before_action :require_admin, only: [:create, :destroy]
   # GET /resources
   # GET /resources.json
   def index
@@ -25,6 +25,8 @@ class ResourcesController < ApplicationController
   # POST /resources
   # POST /resources.json
   def create
+    require_admin
+
     @resource = Resource.new(resource_params)
 
     respond_to do |format|
