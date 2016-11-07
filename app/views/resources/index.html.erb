@@ -5,8 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Path</th>
+      <th>Location</th>
+      <th>Privilege</th>
+      <th>Description</th>
+      <th>Available</th>
+      <th>Type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +17,11 @@
   <tbody>
     <% @resources.each do |resource| %>
       <tr>
-        <td><%= resource.title %></td>
-        <td><%= resource.path %></td>
+        <td><%= resource.location %></td>
+        <td><%= resource.privilege %></td>
+        <td><%= resource.description %></td>
+        <td><%= resource.available %></td>
+        <td><%= resource.resource_type %></td>
         <td><%= link_to 'Show', resource %></td>
         <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
         <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>

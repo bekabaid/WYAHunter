@@ -1,8 +1,11 @@
 class CreateResources < ActiveRecord::Migration[5.0]
   def change
     create_table :resources do |t|
-      t.string :title
-      t.string :path
+      t.string :location
+      t.integer :privilege
+      t.text :description
+      t.integer :available
+      t.string :resource_type
 
       t.timestamps
     end

@@ -1,1 +1,0 @@
-json.partial! "laptops_tables/laptops_table", laptops_table: @laptops_table

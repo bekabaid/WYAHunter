@@ -10,8 +10,7 @@
           <%= f.email_field :email, :placeholder => "Email" %>
           <%= f.password_field :password, :placeholder => "Password" %>
 
-          <%= f.collection_select :privilege, (CoffeeTable.all + LaptopsTable.all + RoomsTable.all + WhiteboardsTable.all), :privilege, :room %>
-
+          <%= f.collection_select :privilege, Resource.all, :privilege, :location %>
 
           <%= f.submit "Create an account", class: "btn-submit" %>
 

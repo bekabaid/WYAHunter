@@ -12,13 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
   </div>
 
   <div class="field">
-    <%= f.label :path %>
-    <%= f.text_field :path %>
+    <%= f.label :privilege %>
+    <%= f.number_field :privilege %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :available %>
+    <%= f.number_field :available %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
   </div>
 
   <div class="actions">

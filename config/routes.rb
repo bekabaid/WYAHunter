@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  root 'sessions#new.html.erb'
   resources :resources
-  resources :whiteboards_tables
-  resources :rooms_tables
-  resources :laptops_tables
-  resources :coffee_tables
+  root 'sessions#new.html.erb'
   get 'create'  => 'users#new'
   resources :users
 

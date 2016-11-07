@@ -1,2 +1,0 @@
-class CoffeeTable < ApplicationRecord
-end
