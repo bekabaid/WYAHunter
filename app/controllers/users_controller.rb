@@ -7,9 +7,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if (@user.email == User.find_by_email(@user.email).email)
-    flash.now[:danger] = 'email already linked to account'
-    render 'new'
+    if (User.find_by_email(@user.email) != nil)
+      flash.now[:danger] = 'email already linked to account'
+      render 'new'
     else @user.save
       redirect_to '/'
     end
@@ -21,4 +21,3 @@ class UsersController < ApplicationController
   end
 
 end
-
