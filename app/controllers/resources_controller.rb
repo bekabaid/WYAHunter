@@ -25,6 +25,10 @@ class ResourcesController < ApplicationController
 
   # GET /resources/1/edit
   def edit
+      print "This is the privilege #{current_user[:privilege]} and the param is #{params[:id]}"
+    #   if current_user[:privilege] != params[:id]
+    #       redirect_to '/login'
+    #   end
   end
 
   # POST /resources
@@ -48,6 +52,12 @@ class ResourcesController < ApplicationController
   # PATCH/PUT /resources/1
   # PATCH/PUT /resources/1.json
   def update
+    if current_user[:privilege] != params[:id].to_i
+        print "Priv and id do not match #{current_user[:privilege]} #{params[:id]}"
+        redirect_to '/login'
+        return
+    end
+
     respond_to do |format|
       if @resource.update(resource_params)
         format.html { redirect_to @resource, notice: 'Resource was successfully updated.' }
