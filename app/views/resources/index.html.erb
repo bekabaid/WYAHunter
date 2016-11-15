@@ -23,8 +23,8 @@
         <td><%= resource.available %></td>
         <td><%= resource.resource_type %></td>
         <td><%= link_to 'Show', resource %></td>
-        <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-        <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% if logged_in? %><%= link_to 'Edit', edit_resource_path(resource) %><% end %></td>
+        <td><% if current_user && is_admin  %><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,7 @@
 
 <br>
 
-<%= link_to 'New Resource', new_resource_path %>
+
+
+<% if current_user && is_admin %><%= link_to 'New Resource', new_resource_path %><% end %>
+

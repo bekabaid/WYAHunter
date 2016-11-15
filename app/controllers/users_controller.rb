@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     else @user.save
       redirect_to '/'
     end
+
   end
 
   private

@@ -27,12 +27,26 @@ class ApplicationController < ActionController::Base
       user_id = session[:user_id]
       user = User.find(user_id)
     end
+
     unless(current_user && user[:privilege] < 0)
       redirect_to '/login'
       return
     end
   end
   helper_method :require_admin
+
+  def is_admin
+    if (logged_in?)
+      user_id = session[:user_id]
+      user = User.find(user_id)
+    end
+    if (user[:privilege] < 0)
+      return true
+    end
+  end
+  helper_method :is_admin
+
+  end
 
   private
 
@@ -47,4 +61,4 @@ class ApplicationController < ActionController::Base
 
 
 
-end
+
