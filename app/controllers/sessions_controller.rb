@@ -14,9 +14,6 @@ class SessionsController < ApplicationController
    #   root to: '/admin_dashboard'
    end
 
-
-  end
-
   def dashboard
   end
 
@@ -45,5 +42,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to '/login'
   end
-
+end
 
