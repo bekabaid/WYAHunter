@@ -1,22 +1,15 @@
 
 <%= stylesheet_link_tag "style" %>
 
-<div class="jumbotron">
-  <div class="login" >
-    <div class="container">
-      <div class="form">
-
+<div class="logo"></div>
+<div class="login-block">
       <%= flash[:danger] %>
       <h1>Log in</h1>
 
       <%= form_for(:session, url: login_path) do |f| %>
-          <%= f.email_field :email, :placeholder => "Email" %>
-          <%= f.password_field :password, :placeholder => "Password" %>
-          <%= f.submit "Log in", class: "btn-submit" %>
+            <input type="text" placeholder="Username" id="username" <%= f.email_field :email %>
+            <input type="password" placeholder="Password" id="password" <%= f.password_field :password %>
+            <button>Submit</button>
       <% end %>
 
-      </div>
-    </div>
-  </div>
 </div>
-
