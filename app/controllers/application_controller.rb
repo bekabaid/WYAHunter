@@ -46,7 +46,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :is_admin
 
-  end
 
   private
 
@@ -58,6 +57,8 @@ class ApplicationController < ActionController::Base
       session[:expires_at] = 0
     end
   end
+end
+
 
 
 

@@ -3,6 +3,18 @@ class SessionsController < ApplicationController
   before_action :require_user, only: [:index, :show]
 
   def new
+    #if(session[:user_id] != nil)
+      #   user_id = session[:user_id]
+     #    user = User.find(user_id)
+    #end
+    #if (user[:privilge] > 0)
+     # root to: '/dashboard'
+    #end
+    #if (user[:privilege] < 0)
+   #   root to: '/admin_dashboard'
+   end
+
+
   end
 
   def dashboard
@@ -34,4 +46,4 @@ class SessionsController < ApplicationController
     redirect_to '/login'
   end
 
-end
+
