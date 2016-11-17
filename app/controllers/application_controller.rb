@@ -9,6 +9,17 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id] && session[:expires_at] > curr
   end
 
+  def already?
+    if(current_user)
+      user = current_user
+      if current_user[:privilege] > 0
+        redirect_to '/dashboard'
+      else redirect_to '/admin_dashboard'
+      end
+    end
+  end
+  helper_method :already?
+
   def logged_in?
     current_user != nil
   end
