@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :resources
+  get 'types' => 'resources#types'
   root 'sessions#new.html.erb'
   get 'create'  => 'users#new'
   resources :users

@@ -25,7 +25,6 @@ class ResourcesController < ApplicationController
 
   # GET /resources/1/edit
   def edit
-      print "This is the privilege #{current_user[:privilege]} and the param is #{params[:id]}"
     #   if current_user[:privilege] != params[:id]
     #       redirect_to '/login'
     #   end
@@ -79,6 +78,11 @@ class ResourcesController < ApplicationController
     end
   end
 
+  def types
+    types = Resource.distinct.pluck(:resource_type)
+    render :json => types
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_resource
@@ -87,6 +91,6 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:location, :privilege, :description, :available, :type)
+      params.require(:resource).permit(:location, :privilege, :description, :available, :resource_type)
     end
 end
