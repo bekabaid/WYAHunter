@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "styleIndex" %>
 
 <h1>Resources</h1>
 
-<table>
-  <thead>
+<div class="tbl-header">
+  <table>
+    <thead>
     <tr>
       <th>Location</th>
       <th>Privilege</th>
@@ -12,24 +14,24 @@
       <th>Type</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @resources.each do |resource| %>
-      <tr>
-        <td><%= resource.location %></td>
-        <td><%= resource.privilege %></td>
-        <td><%= resource.description %></td>
-        <td><%= resource.available %></td>
-        <td><%= resource.resource_type %></td>
-        <td><%= link_to 'Show', resource %></td>
-        <td><% if logged_in? %><%= link_to 'Edit', edit_resource_path(resource) %><% end %></td>
-        <td><% if current_user && is_admin  %><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
-      </tr>
+        <tr>
+          <td><%= resource.location %></td>
+          <td><%= resource.privilege %></td>
+          <td><%= resource.description %></td>
+          <td><%= resource.available %></td>
+          <td><%= resource.resource_type %></td>
+          <td><%= link_to 'Show', resource %></td>
+          <td><% if logged_in? %><%= link_to 'Edit', edit_resource_path(resource) %><% end %></td>
+          <td><% if current_user && is_admin  %><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
+        </tr>
     <% end %>
-  </tbody>
-</table>
-
+    </tbody>
+  </table>
+</div>
 <br>
 
 
