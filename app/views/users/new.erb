@@ -19,3 +19,4 @@
     </div>
   </div>
 </div>
+<% if logged_in? %><br><%= link_to "Log out", logout_path, method: "destroy" %></br><% end %>
