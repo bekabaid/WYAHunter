@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails WYAHunter: development" uuid="c9efb6a6-1b29-4887-8465-1a4342a917e4">
-      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
+    <data-source name="Rails WYAHunter: production" uuid="54e2d4a1-071d-461b-a9f8-e4ef6a500ac0">
+      <database-info product="PostgreSQL" version="9.5.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>kevin</user-name>
+      <user-password>dfdedfcfdfd9dfde</user-password>
+      <resolve-scope>my_database_production:kevin,public</resolve-scope>
+    </data-source>
+    <data-source name="Rails WYAHunter: development" uuid="5d40c9b4-8219-482f-a085-66dfa18732c0">
+      <database-info product="PostgreSQL" version="9.5.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-password>dfdedfcfdfd9dfde</user-password>
+      <resolve-scope>my_databade_development:public</resolve-scope>
     </data-source>
   </component>
 </project>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails WYAHunter: development">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="my_databade_development">
+      <object-id>16530</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="2" name="postgres">
+      <object-id>12411</object-id>
+    </database>
+    <database id="3" name="wya_database_development">
+      <object-id>16385</object-id>
+    </database>
+    <database id="4" name="wya_database_test">
+      <object-id>16386</object-id>
+    </database>
+    <database id="5" name="production">
+      <object-id>16427</object-id>
+    </database>
+    <database id="6" name="my_database_development">
+      <object-id>16428</object-id>
+    </database>
+    <database id="7" name="my_database_test">
+      <object-id>16429</object-id>
+    </database>
+    <database id="8" name="my_database_production">
+      <object-id>16468</object-id>
+    </database>
+    <schema id="9" parent="1" name="public">
+      <object-id>2200</object-id>
+      <visible>1</visible>
+      <introspection-state-number>716</introspection-state-number>
+      <introspection-timestamp>2016-11-22.18:23:08.376</introspection-timestamp>
+    </schema>
+    <schema id="10" parent="1" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="11" parent="1" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="12" parent="1" name="pg_temp_1">
+      <object-id>11816</object-id>
+    </schema>
+    <schema id="13" parent="1" name="pg_toast_temp_1">
+      <object-id>11817</object-id>
+    </schema>
+    <schema id="14" parent="1" name="information_schema">
+      <object-id>12119</object-id>
+    </schema>
+    <sequence id="15" parent="9" name="resources_id_seq">
+      <object-id>16558</object-id>
+      <state-number>716</state-number>
+    </sequence>
+    <sequence id="16" parent="9" name="users_id_seq">
+      <object-id>16547</object-id>
+      <state-number>715</state-number>
+    </sequence>
+    <table id="17" parent="9" name="ar_internal_metadata">
+      <object-id>16539</object-id>
+      <state-number>714</state-number>
+    </table>
+    <table id="18" parent="9" name="resources">
+      <object-id>16560</object-id>
+      <state-number>716</state-number>
+    </table>
+    <table id="19" parent="9" name="schema_migrations">
+      <object-id>16531</object-id>
+      <state-number>713</state-number>
+    </table>
+    <table id="20" parent="9" name="users">
+      <object-id>16549</object-id>
+      <state-number>715</state-number>
+    </table>
+    <column id="21" parent="17" name="key">
+      <state-number>714</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="22" parent="17" name="value">
+      <state-number>714</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="23" parent="17" name="created_at">
+      <state-number>714</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="24" parent="17" name="updated_at">
+      <state-number>714</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <index id="25" parent="17" name="ar_internal_metadata_pkey">
+      <object-id>16545</object-id>
+      <columns>key</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="26" parent="17" name="ar_internal_metadata_pkey">
+      <object-id>16546</object-id>
+      <columns>key</columns>
+      <underlying-index>ar_internal_metadata_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="27" parent="18" name="id">
+      <state-number>716</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;resources_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="28" parent="18" name="location">
+      <state-number>716</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="29" parent="18" name="privilege">
+      <state-number>716</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="30" parent="18" name="description">
+      <state-number>716</state-number>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="31" parent="18" name="available">
+      <state-number>716</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="32" parent="18" name="resource_type">
+      <state-number>716</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="33" parent="18" name="created_at">
+      <state-number>716</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="34" parent="18" name="updated_at">
+      <state-number>716</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <index id="35" parent="18" name="resources_pkey">
+      <object-id>16567</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="36" parent="18" name="resources_pkey">
+      <object-id>16568</object-id>
+      <columns>id</columns>
+      <underlying-index>resources_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="37" parent="19" name="version">
+      <state-number>713</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar|0</data-type>
+    </column>
+    <index id="38" parent="19" name="schema_migrations_pkey">
+      <object-id>16537</object-id>
+      <columns>version</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="39" parent="19" name="schema_migrations_pkey">
+      <object-id>16538</object-id>
+      <columns>version</columns>
+      <underlying-index>schema_migrations_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="40" parent="20" name="id">
+      <state-number>715</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;users_id_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="41" parent="20" name="my_name">
+      <state-number>715</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="42" parent="20" name="email">
+      <state-number>715</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="43" parent="20" name="password_digest">
+      <state-number>715</state-number>
+      <data-type>varchar|0</data-type>
+    </column>
+    <column id="44" parent="20" name="privilege">
+      <state-number>715</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="45" parent="20" name="created_at">
+      <state-number>715</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="46" parent="20" name="updated_at">
+      <state-number>715</state-number>
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <index id="47" parent="20" name="users_pkey">
+      <object-id>16556</object-id>
+      <columns>id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="48" parent="20" name="users_pkey">
+      <object-id>16557</object-id>
+      <columns>id</columns>
+      <underlying-index>users_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
