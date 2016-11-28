@@ -79,7 +79,7 @@ class ResourcesController < ApplicationController
   end
 
   def types
-    types = Resource.distinct.pluck(:resource_type)
+    types = Resource.select("lower (resource_type) as rt").distinct.map {|c| c.rt}
     render :json => types
   end
 
