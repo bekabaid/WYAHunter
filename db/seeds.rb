@@ -51,5 +51,5 @@
                               available: 42,
                               resource_type: 'laptops')
 
-User.create(my_name: 'David', email: 'david@david.com',
+User.create(my_name: 'Beka', email: 'beka@beka.com',
             password_digest:'$2a$10$/wUgVZwYw2W4mWuqwVtoqOir3UMYUN12JrumQukNJjSCWLZRe/paa', privilege: -1)
