@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'email already linked to an account'
       render 'new'
     else @user.save
-      #UserMailer.welcome_email(@user).deliver_later
+      UserMailer.welcome_email(@user).deliver_later
       redirect_to '/'
     end
 
