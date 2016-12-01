@@ -1,9 +1,9 @@
 class UserMailer < ApplicationMailer
-  default from: 'https://wyahunter.herokuapp.com'
+  default from: 'wyahunter.herokuapp.com'
 
   def welcome_email(user)
     @user = user
-    @url  = ''
+    @url  = 'https://wyahunter.herokuapp.com'
     mail(to: @user.email, subject: 'you made it breh')
   end
 end
