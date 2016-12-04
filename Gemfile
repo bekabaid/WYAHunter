@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+#Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -32,6 +35,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
   gem 'byebug', platform: :mri
+  gem 'figaro', '~> 1.1', '>= 1.1.1'
+  #Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 end
 
 group :development do
@@ -45,7 +50,7 @@ group :development do
 end
 
 group :production do
-    gem 'pg'
+    #gem 'pg'
     gem 'rails_12factor'
 end
 
