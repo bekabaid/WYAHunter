@@ -46,15 +46,15 @@
       </div>
 
       <ul class="nav">
-        <li class="active">
-          <a>
+        <li>
+
             <i class="pe-7s-graph"></i>
-            Resources
-          </a>
+            <%= link_to 'Resource ', admin_dashboard_path(session) %>
+
         </li>
         <li>
-           <a <%= link_to 'Create Resource ', admin_dashboard_newResource_path(session) %>
-            <i class="pe-7s-user"></i>
+          <a <%= link_to 'Create Resource ', admin_dashboard_newResource_path(session) %>
+          <i class="pe-7s-user"></i>
 
           </a>
         </li>
@@ -64,9 +64,10 @@
             Users List
           </a>
         </li>
-        <li>
-           <%= link_to 'Create User', admin_dashboard_createUser_path(users_path) %><!--add appropriate links -->
-            <i class="pe-7s-note2"></i>
+        <li class="active">
+          <a>
+            Create User<!--add appropriate links -->
+          <i class="pe-7s-note2"></i>
           </a>
         </li>
 
@@ -89,14 +90,14 @@
         </div>
       </div>
 
-        <a href="#">
+      <a href="#">
 
-          <%= link_to "Log out", logout_path, method: "destroy" %>
-          </a>
+        <%= link_to "Log out", logout_path, method: "destroy" %>
+      </a>
 
     </nav>
 
-    <iframe src="http://localhost:3000/resources" frameborder="0" width="1150" height="800" /></iframe>
+    <iframe src="http://localhost:3000/users/new" frameborder="0" width="1150" height="800" /></iframe>
 
 
 
