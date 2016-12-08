@@ -28,12 +28,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 #Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 
+gem 'sqlite3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
   gem 'byebug', platform: :mri
   gem 'figaro', '~> 1.1', '>= 1.1.1'
   #Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
