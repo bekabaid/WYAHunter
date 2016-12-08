@@ -3,6 +3,9 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user.my_name = "anon"
+    @user.verified = false
+
   end
 
   def create
@@ -11,16 +14,31 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'email already linked to an account'
       render 'new'
     else
-      UserMailer.welcome_email(@user).deliver
+      @user.password = SecureRandom.base64(n=8)
+      @user.verify_token = SecureRandom.base64(n=8)
+      UserMailer.welcome_email(@user).deliver_now
       @user.save
-      redirect_to '/'
-    end
+  end
+  end
 
+  def check
+    @user = User.find_by_email!(params[:temp][:email])
+      vc = params[:temp][:verify_token]
+      if @user.verify_token === vc
+        User.find_by_email(params[:temp][:email]).update_column :verified, true
+        User.find_by_email(params[:temp][:email]).update_column :my_name, params[:temp][:my_name]
+        User.find_by_email(params[:temp][:email]).update_attribute :password, params[:temp][:password]
+
+        redirect_to '/'
+      else render 'new'
+      end
   end
 
   private
+
+
   def user_params
-    params.require(:user).permit(:my_name, :email, :password, :privilege)
+    params.require(:user).permit(:email, :privilege, :password)
   end
 
 end

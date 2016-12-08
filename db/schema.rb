@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20161103145522) do
     t.string   "email"
     t.string   "password_digest"
     t.integer  "privilege"
+    t.boolean  "verified"
+    t.string   "verify_token"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "password_reset_token"

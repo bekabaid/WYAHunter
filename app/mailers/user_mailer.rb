@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
   def welcome_email(user)
     @user = user
-    @url  = 'https://wyahunter.herokuapp.com'
+    @url  = 'https://wyahunter.herokuapp.com/verify_new'
     mail(to: @user.email, subject: "you made it breh")
   end
 end

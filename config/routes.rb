@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'types' => 'resources#types'
   root 'sessions#new.html.erb'
   get 'create'  => 'users#new'
+  get 'verify_new' => 'users#verify_new'
+  post 'verify' => 'users#check'
   resources :users
 
 

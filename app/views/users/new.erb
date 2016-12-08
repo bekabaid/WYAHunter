@@ -1,6 +1,7 @@
 <!--<div class="login">-->
   <!--<div class="container">-->
     <!--<div class="form">-->
+
 <body>
 <div id="wrapper">
 
@@ -12,10 +13,7 @@
       <fieldset>
         <legend>Create An Account</legend>
 
-          <%= f.text_field :my_name, :placeholder => "Name" %>
          <%= f.email_field :email, :placeholder => "Email" %>
-          <%= f.password_field :password, :placeholder => "Password" %>
-
         <nav id="cbp-hrmenu" class="cbp-hrmenu">
           <%= f.collection_select :privilege, Resource.all, :privilege, :location %>
           </nav>

@@ -22,6 +22,13 @@ module ApplicationHelper
     return " "
   end
 
+  def check_email(email)
+    @user = User.find_by_email(email)
+    if @user != nil
+      return @user
+    else return " "
+    end
 
+  end
 
 end

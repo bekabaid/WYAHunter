@@ -53,3 +53,5 @@
 
 User.create!(my_name: 'Beka', email: 'beka@beka.com',
             password:"super", privilege: 2)
+
+User.create(my_name: 'David', email: 'david@david.com', password:"super", privilege:-2)

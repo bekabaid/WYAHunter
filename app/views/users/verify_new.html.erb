@@ -1,0 +1,7 @@
+<%= form_for(:temp, url: verify_path) do |f| %>
+    <input type="text" placeholder="Username" id="username" <%= f.email_field :email %>
+    <input type="text" placeholder="Verification Code" id="VC" <%= f.text_field :verify_token %>
+    <%= f.text_field :my_name, :placeholder => "Name" %>
+    <%= f.password_field :password, :placeholder => "Password" %>
+    <button>Submit</button>
+<% end %>
