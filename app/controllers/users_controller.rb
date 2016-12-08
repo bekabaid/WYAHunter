@@ -1,11 +1,19 @@
 class UsersController < ApplicationController
 #before_action :logged_in_user
 
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
     @user.my_name = "anon"
     @user.verified = false
 
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def create
