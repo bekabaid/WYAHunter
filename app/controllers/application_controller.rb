@@ -39,6 +39,11 @@ class ApplicationController < ActionController::Base
       user = User.find(user_id)
     end
 
+    # def privilege_match
+    #   user_id = session[:user_id]
+    #   user = User.find(user_id)
+    # end
+
     unless(current_user && user[:privilege] < 0)
       redirect_to '/login'
       return
