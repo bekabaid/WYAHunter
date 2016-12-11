@@ -60,12 +60,12 @@ Rails.application.configure do
       :enable_starttls_auto => true,
       :address        => 'smtp.gmail.com',
       :port           => 587,
-      :domain         => 'whatever.yourrubyapp.com',
+      :domain         => 'WYAHunter.herokuapp.com',
       :authentication => :plain,
       :user_name      => ENV['username@gmail.com'],
       :password       => ENV['password']
   }
-  config.action_mailer.default_url_options = {host: "http://127.0.0.1:3000"}
+  config.action_mailer.default_url_options = {host: "WYAHunter.herokuapp.com"}
 
   config.action_mailer.perform_caching = false
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

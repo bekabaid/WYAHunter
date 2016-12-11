@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1> <%= @user.my_name %> , We need to verify your account!</h1>
+<p>
+  You are receiving this because you have recently logged in and
+  we need to verify who you are
+</p>
+<p>
+  To finish logging into the site, just follow this link: <%= @url %>.
+  Verify your account and then you're good!
 
-<html>
+  here is your verification code:
+  <%= @user.verify_token %>
+</p>
+<p>Thanks and have a great day!</p>
+</body>
+</html>
 

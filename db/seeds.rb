@@ -9,6 +9,12 @@
 # Seed resources
 
 
+    Resource.create(location: 'Hunter Admin',
+                privilege: -2,
+                description:' ',
+                available: 0,
+                resource_type: 'Admin')
+
     Resource.create(location: 'Hunter West Cafeteria',
                      privilege: 1,
                      description:'The coffee machine is broken',
@@ -51,8 +57,8 @@
                               available: 42,
                               resource_type: 'laptops')
 
-User.create!(my_name: 'Beka', email: 'beka@beka.com',
-            password:"super", privilege: 2, verified: true)
+User.create!(my_name: 'SuperAdmin', email: 'WYAHunter@gmail.com',
+            password:"WYAHunter1", privilege: -2, verified: true)
 
 User.create(my_name: 'David', email: 'david@david.com',
             password:"super", privilege:-2, verified: true)
