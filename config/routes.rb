@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   root 'sessions#new.html.erb'
   get 'create'  => 'users#new'
   get 'verify_new' => 'users#verify_new'
-  post 'verify' => 'users#check'
-  resources :users
+  post 'verify_new' => 'users#check'
+  get 'authentication' => 'users#authentication'
+  post 'authentication' => 'sessions#dashboard_check'
 
+  resources :users
 
   get 'login' => 'sessions#new.html.erb'
   get 'dashboard' => 'sessions#dashboard.html.erb'
