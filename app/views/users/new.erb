@@ -15,7 +15,7 @@
 
          <%= f.email_field :email, :placeholder => "Email" %>
         <nav id="cbp-hrmenu" class="cbp-hrmenu">
-          <%= f.collection_select :privilege, Resource.all, :privilege, :location %>
+          <%= f.collection_select :privilege, Resource.all, :privilege, :location  %>
           </nav>
 
           <%= f.submit "Submit", class: "btn-submit" %>
