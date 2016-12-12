@@ -47,7 +47,7 @@
 
       <ul class="nav">
         <li>
-          <a <%= link_to 'Resource ', admin_dashboard_path(session) %>
+          <a <%= link_to 'Resources', admin_dashboard_path(session) %>
           <i class="pe-7s-graph"></i>
           </a>
         </li>
@@ -58,9 +58,8 @@
           </a>
         </li>
         <li>
-          <a href="table.html">
+          <%= link_to 'Users List', admin_dashboard_Users_path(session)%>
             <i class="pe-7s-note2"></i>
-            Users List
           </a>
         </li>
         <li>
@@ -99,7 +98,7 @@
       </div>
     </nav>
 
-    <iframe src="http://localhost:3000/resources/new" frameborder="0" width="1150" height="800" /></iframe>
+    <iframe src="http://wyahunter.herokuapp.com/resources/neww" frameborder="0" width="1150" height="800" /></iframe>
 
 
 

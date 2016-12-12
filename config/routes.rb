@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'admin_dashboard' => 'sessions#admin_dashboard.html.erb'
   get 'admin_dashboard_newResource' => 'sessions#admin_dashboard_newResource.html.erb'
   get 'admin_dashboard_createUser' => 'sessions#admin_dashboard_createUser.html.erb'
+  get 'admin_dashboard_Users' => 'sessions#admin_dashboard_Users.html.erb'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
   # available within this file, see http://guides.rubyonrails.org/routing.html

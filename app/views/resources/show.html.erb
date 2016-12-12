@@ -1,28 +1,56 @@
+<link rel="stylesheet" type="text/css" href="http://codepen.io/jackrugile/pen/EyABe.css">
 <p id="notice"><%= notice %></p>
+<TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
 
-<p>
-  <strong>Location:</strong>
-  <%= @resource.location %>
-</p>
+  <TR>
+    <TH>Location</TH>
+    <% if logged_in? %><TH>Privilege</TH><% end %>
+    <TH>Description</TH>
+    <TH>Available</TH>
+    <% if logged_in? %><TH>Type</TH><% end %>
+  </TR>
 
-<p>
-  <strong>Description:</strong>
-  <%= @resource.description %>
-</p>
+  <TR ALIGN="CENTER">
+    <TD><%= @resource.location %></TD>
+    <% if logged_in? %> <TD><%= @resource.privilege %></TD><% end %>
+    <TD><%= @resource.description %></TD>
+    <TD><%= @resource.available %></TD>
+    <% if logged_in? %><TD><%= @resource.resource_type %></TD><% end %>
+  </TR>
+</TABLE>
 
-<p>
-  <strong>Available:</strong>
-  <%= @resource.available %>
-</p>
+<!--<p>-->
+  <!--<strong>Location:</strong>-->
+  <!--<%= @resource.location %>-->
+<!--</p>-->
 
-<p>
-  <strong>Type:</strong>
-  <%= @resource.resource_type %>
-</p>
+<!--<p>-->
+  <!--<strong>Privilege:</strong>-->
+  <!--<%= @resource.privilege %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<strong>Description:</strong>-->
+  <!--<%= @resource.description %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<strong>Available:</strong>-->
+  <!--<%= @resource.available %>-->
+<!--</p>-->
+
+<!--<p>-->
+  <!--<strong>Type:</strong>-->
+  <!--<%= @resource.resource_type %>-->
+<!--</p>-->
 
 
 <% if logged_in? %><%= link_to 'Edit', edit_resource_path(@resource) %>|<% end %>
 
 <%= link_to 'Back', resources_path %>
 
-<% if logged_in? %><br><%= link_to "Log out", logout_path, method: "destroy" %></br><% end %>
+<% if logged_in? %><br><%= link_to "Log out", logout_path, method: "destroy" %><% end %>
+
+
+
+

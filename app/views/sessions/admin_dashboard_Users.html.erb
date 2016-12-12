@@ -49,6 +49,26 @@
         <li>
           <a <%= link_to 'Resources', admin_dashboard_path(session) %>
           <i class="pe-7s-graph"></i>
+          </a>
+        </li>
+        <li>
+          <a <%= link_to 'Create Resource', admin_dashboard_newResource_path(session) %>
+            <i class="pe-7s-user"></i>
+          </a>
+        </li>
+        <li class="active">
+          <a>
+            <i class="pe-7s-note2"></i>
+            Users List
+          </a>
+        </li>
+        <li>
+          <%= link_to 'Create User', admin_dashboard_createUser_path(session) %><!--add appropriate links -->
+          <i class="pe-7s-note2"></i>
+
+        </li>
+
+
       </ul>
     </div>
   </div>
@@ -78,7 +98,7 @@
       </div>
     </nav>
 
-    <iframe src="http://localhost:3000/resources" frameborder="0" width="1150" height="800" /></iframe>
+    <iframe src="http://wyahunter.herokuapp.com/users" frameborder="0" width="1150" height="800" /></iframe>
 
 
 

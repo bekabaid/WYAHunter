@@ -59,9 +59,8 @@
           </a>
         </li>
         <li>
-          <a href="table.html">
+          <%= link_to 'Users List', admin_dashboard_Users_path(session)%>
             <i class="pe-7s-note2"></i>
-            Users List
           </a>
         </li>
         <li>
@@ -89,14 +88,17 @@
         </div>
       </div>
 
+      <li>
         <a href="#">
 
           <%= link_to "Log out", logout_path, method: "destroy" %>
           </a>
+      </li>
+
 
     </nav>
 
-    <iframe src="http://localhost:3000/resources" frameborder="0" width="1150" height="800" /></iframe>
+    <iframe src="http://wyahunter.herokuapp.com/resources" frameborder="0" width="1150" height="800" /></iframe>
 
 
 
