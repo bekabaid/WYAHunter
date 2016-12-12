@@ -24,8 +24,8 @@
           <td><%= resource.available %></td>
           <td><%= resource.resource_type %></td>
           <td><%= link_to 'Show', resource %></td>
-          <td><% if logged_in? && current_user.privilege === resource.privilege %><%= link_to 'Edit', edit_resource_path(resource) %><% end %></td>
-          <td><% if current_user && is_admin  %><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
+          <td><% if logged_in? && (current_user.privilege === resource.privilege || is_admin) %><%= link_to 'Edit', edit_resource_path(resource) %><% end %></td>
+          <td><% if current_user && is_admin  %><%= link_to 'Destroy', resource, method: resource.destroy, data: { confirm: 'Are you sure?' } %><% end %></td>
         </tr>
         <% end %>
     <% end %>
