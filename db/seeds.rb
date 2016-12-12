@@ -57,8 +57,5 @@
                               available: 42,
                               resource_type: 'laptops')
 
-User.create!(my_name: 'SuperAdmin', email: 'WYAHunter@gmail.com',
-            password:"WYAHunter1", privilege: -2, verified: true)
-
-User.create(my_name: 'David', email: 'david@david.com',
-            password:"super", privilege:-2, verified: true)
+User.create!(my_name: 'Admin', email: 'WYAHunter@gmail.com',
+            password:"super", privilege: -2, verified: true)
