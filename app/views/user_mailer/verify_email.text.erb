@@ -1,0 +1,13 @@
+<%= @user.my_name %> , We need to verify your account!
+
+You are receiving this because you have recently logged in and
+we need to verify who you are
+
+To finish logging into the site, just follow this link: <%= @url %>.
+Verify your account and then you're good!
+
+here is your verification code:
+<%= @user.verify_token %>
+
+Thanks and have a great day!
+
